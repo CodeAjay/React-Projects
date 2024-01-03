@@ -1,34 +1,14 @@
 // App.js
 
-import React from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar';
-
-
-
-function Home() {
-  return (
-   <div className='py-5 text-green-500 text-4xl font-bold'><h1>Home Page</h1></div>
-  )
-}
-
-function About () {
-  return (
-   <div className='py-5'><h1>About Page</h1></div>
-  )
-}
-
-function Services (){
-  return (
-   <div className='py-5'><h1>Services Page</h1></div>
-  )
-}
-
-function Contact () {
-  return (
-   <div className='py-5'><h1>Contact Page</h1></div>
-  )
-}
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import { AboutPage, ServicesPage, ContactPage, HomePage } from "./pages/Index";
+import Footer from "./components/Footer";
+import Project1 from "./pages/Projects/Project1";
+import Project2 from "./pages/Projects/Project2";
+// import Project3 from "./pages/Projects/Project3";
+import AllProjects from "./pages/Projects/AllProjects";
 
 const App = () => {
   return (
@@ -36,11 +16,17 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" exact Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/services" Component={Services} />
-          <Route path="/contact" Component={Contact} />
+          <Route path="/" exact Component={HomePage} />
+          <Route path="/about" Component={AboutPage} />
+          <Route path="/services" Component={ServicesPage} />
+          <Route path="/contact" Component={ContactPage} />
+          {/* <Route path="/projects/project3" Component={Project3} /> */}
+          <Route path="/projects/" element={<AllProjects />} >
+            <Route path="project1" Component={Project1} />
+            <Route path="project2" Component={Project2} />
+          </Route>
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
 

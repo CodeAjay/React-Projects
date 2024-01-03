@@ -1,0 +1,35 @@
+.herosection{
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #90CAF9, #42A5F5, #0D47A1);
+}
+
+.container{
+    margin: auto;
+    max-width: 1440px;
+    padding: 50px;
+}
+
+.banner{
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #90CAF9, #42A5F5, #0D47A1);
+}
+
+
+h1{
+    background-image: linear-gradient(45deg, rgb(16, 253, 3), rgb(218, 205, 23)
+);
+    color: transparent;
+    background-clip: text;
+    background-blend-mode: color-burn;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:30px;
+}

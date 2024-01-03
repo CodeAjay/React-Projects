@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './components.css'
 
 const Navbar = () => {
   return (
-    <div className="bg-blue-500 p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <div className="flex direction-row bg-blue-500 p-4">
+      <div className="nav_container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-white text-xl font-bold">
           My Website
@@ -22,6 +23,9 @@ const Navbar = () => {
           </Link>
           <Link to="/services" className="text-white">
             Services
+          </Link>
+          <Link to="/projects" className="text-white">
+            Projects
           </Link>
           <Link to="/contact" className="text-white">
             Contact

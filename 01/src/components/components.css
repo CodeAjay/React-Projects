@@ -1,0 +1,17 @@
+.nav_container{
+    width:1440px;
+    padding: 5px 50px;
+}
+
+.card{
+    width: max-content;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.card_text{
+    padding:20px;
+}
+
